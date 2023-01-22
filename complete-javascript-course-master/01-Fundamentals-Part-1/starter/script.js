@@ -35,6 +35,7 @@
 
 // //6.Should be descriptive.
 
+/*
 
 let javaScriptIsFun = true;
 console.log(javaScriptIsFun);//true
@@ -57,3 +58,24 @@ console.log(typeof year); //number
 
 //Bug in JS (typeof)
 console.log(typeof null);//Object which is not true. It should return null.
+
+*/
+
+let age = 30;
+age = 31;
+
+const birthYear = 1998;
+//birthyear = 1990; //Error
+
+// const job; //Error
+
+var a;
+var a = 12;
+
+var b;
+b = 20;
+var b = 45;
+
+firstName = "Nidhi";
+lastName = "Jagga";
+console.log(firstName + " " + lastName);
