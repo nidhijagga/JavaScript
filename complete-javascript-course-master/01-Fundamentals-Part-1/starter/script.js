@@ -174,27 +174,50 @@ GOOD LUCK 😀
 
 
 
+// ////////////////////////////////////
+// // Strings and Template Literals
+// const firstName = 'Jonas';
+// const job = 'teacher';
+// const birthYear = 1991;
+// const year = 2037;
+
+// const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
+// console.log(jonas);
+
+// const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
+// console.log(jonasNew);
+
+// console.log(`Just a regular string...`);
+
+// console.log('String with \n\
+// multiple \n\
+// lines');
+
+// console.log(`String
+// with
+// multiple
+// lines`);
+
+
 ////////////////////////////////////
-// Strings and Template Literals
-const firstName = 'Jonas';
-const job = 'teacher';
-const birthYear = 1991;
-const year = 2037;
+// Taking Decisions: if / else Statements
+const age = 13;
+const yearsLeft = 18 - age;
 
-const jonas = "I'm " + firstName + ', a ' + (year - birthYear) + ' year old ' + job + '!';
-console.log(jonas);
+if (age >= 18) {
+    console.log('Sarah can start driving 🚗');
+}
+else {
+    console.log(`Sarah is too young. Wait another ${yearsLeft} Years. `);
+}
 
-const jonasNew = `I'm ${firstName}, a ${year - birthYear} year old ${job}!`;
-console.log(jonasNew);
 
-console.log(`Just a regular string...`);
+const birthYear = 2022;
 
-console.log('String with \n\
-multiple \n\
-lines');
-
-console.log(`String 
-with
-multiple
-lines`);
-
+let century;
+if (birthYear <= 2000) {
+    century = 20;
+} else {
+    century = 21;
+}
+console.log(century);
