@@ -326,49 +326,93 @@ GOOD LUCK 😀
 
 
 ///////////////////////////////////////
-// Object Methods
+// // Object Methods
 
-const jonas = {
-    firstName: 'Jonas',
-    lastName: 'Schmedtmann',
-    birthYeah: 1991,
-    job: 'teacher',
-    friends: ['Michael', 'Peter', 'Steven'],
-    hasDriversLicense: true,
+// const jonas = {
+//     firstName: 'Jonas',
+//     lastName: 'Schmedtmann',
+//     birthYeah: 1991,
+//     job: 'teacher',
+//     friends: ['Michael', 'Peter', 'Steven'],
+//     hasDriversLicense: true,
 
-    // calcAge: function (birthYeah) {
-    //     return 2037 - birthYeah;
-    // }
+//     // calcAge: function (birthYeah) {
+//     //     return 2037 - birthYeah;
+//     // }
 
-    // calcAge: function () {
-    //     console.log(this);//this point to jonas.
-    //     return 2037 - this.birthYeah;
-    // }
+//     // calcAge: function () {
+//     //     console.log(this);//this point to jonas.
+//     //     return 2037 - this.birthYeah;
+//     // }
 
-    calcAge: function () {
-        this.age = 2037 - this.birthYeah;
-        return this.age;//now a new property of jonas that is age is created.
-    },
+//     calcAge: function () {
+//         this.age = 2037 - this.birthYeah;
+//         return this.age;//now a new property of jonas that is age is created.
+//     },
 
-    // summary: `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he ${this.hasDriversLicense ? 'a' : 'no'} driver's License` //This Will not work. Because this property is only available for functions.
+//     // summary: `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he ${this.hasDriversLicense ? 'a' : 'no'} driver's License` //This Will not work. Because this property is only available for functions.
 
-    summary: function () {
-        return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he ${this.hasDriversLicense ? 'a' : 'no'} driver's License`
+//     summary: function () {
+//         return `${this.firstName} is a ${this.calcAge()} years old ${this.job}, and he ${this.hasDriversLicense ? 'a' : 'no'} driver's License`
+//     }
+// }
+
+// // console.log(jonas.calcAge(1991));
+// // console.log(jonas['calcAge'](1991)); //Notice this carefully
+
+// // console.log(jonas.calcAge(jonas.birthYeah));
+// console.log(jonas.calcAge());
+
+// console.log(jonas.age);//We have to run jonas.calcAge() atleast once to use jonas.age directly.
+
+// //Challenge
+// // "Jonas is a 46-year old teacher, and he has a driver's license"
+
+// console.log(jonas.summary());
+
+
+///////////////////////////////////////
+// Coding Challenge #3
+
+/*
+Let's go back to Mark and John comparing their BMIs! This time, let's use objects to implement the calculations! Remember: BMI = mass / height ** 2 = mass / (height * height). (mass in kg and height in meter)
+
+1. For each of them, create an object with properties for their full name, mass, and height (Mark Miller and John Smith)
+2. Create a 'calcBMI' method on each object to calculate the BMI (the same method on both objects). Store the BMI value to a property, and also return it from the method.
+3. Log to the console who has the higher BMI, together with the full name and the respective BMI. Example: "John Smith's BMI (28.3) is higher than Mark Miller's (23.9)!"
+
+TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.95 m tall.
+
+GOOD LUCK 😀
+*/
+
+const john = {
+    fullName: 'John Smith',
+    mass: 92,
+    height: 1.95,
+    calcBMI: function () {
+        this.BMI = this.mass / this.height ** 2;
+        return this.BMI;
     }
 }
 
-// console.log(jonas.calcAge(1991));
-// console.log(jonas['calcAge'](1991)); //Notice this carefully
+const mark = {
+    fullName: 'Mark Miller',
+    mass: 78,
+    height: 1.69,
+    calcBMI: function () {
+        this.BMI = this.mass / this.height ** 2;
+        return this.BMI;
+    }
+}
+console.log(john.calcBMI(), mark.calcBMI());
 
-// console.log(jonas.calcAge(jonas.birthYeah));
-console.log(jonas.calcAge());
-
-console.log(jonas.age);//We have to run jonas.calcAge() atleast once to use jonas.age directly.
-
-//Challenge
-// "Jonas is a 46-year old teacher, and he has a driver's license"
-
-console.log(jonas.summary());
+if (john.calcBMI() > mark.calcBMI()) {
+    console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than  ${mark.fullName}'s (${mark.BMI})!`);
+}
+else {
+    console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than  ${john.fullName}'s (${john.BMI})!`);
+}
 
 
 
