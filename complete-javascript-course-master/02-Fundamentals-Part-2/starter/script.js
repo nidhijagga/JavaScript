@@ -386,32 +386,53 @@ TEST DATA: Marks weights 78 kg and is 1.69 m tall. John weights 92 kg and is 1.9
 GOOD LUCK 😀
 */
 
-const john = {
-    fullName: 'John Smith',
-    mass: 92,
-    height: 1.95,
-    calcBMI: function () {
-        this.BMI = this.mass / this.height ** 2;
-        return this.BMI;
-    }
-}
+// const john = {
+//     fullName: 'John Smith',
+//     mass: 92,
+//     height: 1.95,
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;
+//     }
+// }
 
-const mark = {
-    fullName: 'Mark Miller',
-    mass: 78,
-    height: 1.69,
-    calcBMI: function () {
-        this.BMI = this.mass / this.height ** 2;
-        return this.BMI;
-    }
-}
-console.log(john.calcBMI(), mark.calcBMI());
+// const mark = {
+//     fullName: 'Mark Miller',
+//     mass: 78,
+//     height: 1.69,
+//     calcBMI: function () {
+//         this.BMI = this.mass / this.height ** 2;
+//         return this.BMI;
+//     }
+// }
+// console.log(john.calcBMI(), mark.calcBMI());
 
-if (john.calcBMI() > mark.calcBMI()) {
-    console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than  ${mark.fullName}'s (${mark.BMI})!`);
-}
-else {
-    console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than  ${john.fullName}'s (${john.BMI})!`);
+// if (john.calcBMI() > mark.calcBMI()) {
+//     console.log(`${john.fullName}'s BMI (${john.BMI}) is higher than  ${mark.fullName}'s (${mark.BMI})!`);
+// }
+// else {
+//     console.log(`${mark.fullName}'s BMI (${mark.BMI}) is higher than  ${john.fullName}'s (${john.BMI})!`);
+// }
+
+
+
+///////////////////////////////////////
+// Iteration: The for Loop
+
+console.log('Lifting weights repetition 1 🏋️‍♀️');
+console.log('Lifting weights repetition 2 🏋️‍♀️');
+console.log('Lifting weights repetition 3 🏋️‍♀️');
+console.log('Lifting weights repetition 4 🏋️‍♀️');
+console.log('Lifting weights repetition 5 🏋️‍♀️');
+console.log('Lifting weights repetition 6 🏋️‍♀️');
+console.log('Lifting weights repetition 7 🏋️‍♀️');
+console.log('Lifting weights repetition 8 🏋️‍♀️');
+console.log('Lifting weights repetition 9 🏋️‍♀️');
+console.log('Lifting weights repetition 10 🏋️‍♀️');
+
+// for loop keeps running while condition is TRUE
+for (let rep = 1; rep <= 30; rep++) {
+    console.log(`Lifting weights repetition ${rep} 🏋️‍♀️`);
 }
 
 
